@@ -16,9 +16,11 @@ const getItem = (label, key, icon, children) => {
 
 const items = [
   getItem("Início", "/", <HomeOutlined />),
-  getItem("Dev", "dev", <SettingOutlined />, [
-    getItem("Converter Texto", "/convert-text", null),
-    getItem("Gerar Senha", "/generate-key", null),
+  getItem("Conversão", "conversao", <SettingOutlined />, [
+    getItem("Conversor de Texto", "/convert-text", null),
+  ]),
+  getItem("Gerador", "gerador", <SettingOutlined />, [
+    getItem("Gerador de Senha", "/generate-key", null),
   ]),
 ];
 
