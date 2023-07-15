@@ -44,7 +44,7 @@ function App() {
         <div className="logo">
           <img src={Logo} alt="logo: tech tools" 
             style={{
-              width: '5vw',
+              width: '75px',
               background: 'rgba(255, 255, 255, 0.2)',
               margin: '16px 24px 16px 0',
               float: 'left',
