@@ -1,6 +1,17 @@
-hr {
-  width: 628px;
-  height:1px;
-  background-color: rgba(0,0,0, 0.2);
-  float: left;
+@media (min-width: 740px) {
+  .content-body {
+    margin: 0% 20%;
+  }
+  .form-items {
+    width: 43.5vw;
+  }
+}
+
+@media (max-width: 739.98px) {
+  .content-body {
+    margin: 0% 0%;
+  }
+  .form-items {
+    width: 65vw;
+  }
 }
