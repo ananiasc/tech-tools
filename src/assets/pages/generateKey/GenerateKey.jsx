@@ -66,13 +66,12 @@ function GenerateKey() {
   }
 
   return (
-    <div className='content-body' style={{margin: '0% 20%'}}>
+    <div className='content-body'>
       <h1>Gerador de Senha</h1>
       <Form
         labelCol={{ span: 10 }}
-        wrapperCol={{ span: 21 }}
+        wrapperCol={{ span: 24 }}
         layout="vertical"
-        style={{ maxWidth: 1080 }}
         onFinish={onProcess}
       >
         <Form.Item label="Digite o nome dos ambientes:">
@@ -80,6 +79,7 @@ function GenerateKey() {
             type="number"
             placeholder="10"
             value={size}
+            className='form-items'
             min={1}
             max={128}
             required
@@ -120,14 +120,13 @@ function GenerateKey() {
             onChange={() => {
               setContainCharacSpecial(!containCharacSpecial);
             }}
+            style={{minWidth: '180px'}}
           />
         </Form.Item>
         <Button type="primary" htmlType="submit">
           Processar
         </Button>
-      </Form>
-
-      <br/><hr /><br/>
+      </Form><br/><br/>
 
       <h3>Senha Gerada</h3>
 
@@ -135,11 +134,10 @@ function GenerateKey() {
         labelCol={{ span: 10 }}
         wrapperCol={{ span: 14 }}
         layout="vertical"
-        style={{ maxWidth: 1080 }}
       >
         <Form.Item label="Clique no campo para copiá-lo:">
-          <Space direction="vertical" style={{ width: '43.5vw' }}>
-            <Space.Compact style={{ width: '43.5vw' }}>
+          <Space direction="vertical" className='form-items'>
+            <Space.Compact className='form-items'>
               <TextArea 
                 rows={3}
                 value={key}

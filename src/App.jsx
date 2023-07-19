@@ -3,6 +3,7 @@ import { Layout, Menu, theme } from 'antd';
 import { useNavigate } from "react-router-dom";
 import ContentBody from './assets/pages/content/ContentBody';
 import Logo from '/logo-sf.png?url';
+import { useEffect, useState } from 'react';
 
 const { Header, Sider, Content, Footer } = Layout;
 const getItem = (label, key, icon, children) => {
@@ -26,6 +27,24 @@ const items = [
 
 function App() {
   const navigate = useNavigate();
+  const [widthSize, setWidthSize] = useState(window.innerWidth);
+  const [collapsed, setCollapsed] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWidthSize(window.innerWidth);
+    };
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
+  useEffect(() => {
+    setCollapsed(widthSize > 740 ? false : true);
+  }, [widthSize]);
+  
   const {
     token: { colorBgContainer },
   } = theme.useToken();
@@ -44,7 +63,7 @@ function App() {
         <div className="logo">
           <img src={Logo} alt="logo: tech tools" 
             style={{
-              width: '5vw',
+              width: '75px',
               background: 'rgba(255, 255, 255, 0.2)',
               margin: '16px 24px 16px 0',
               float: 'left',
@@ -53,10 +72,8 @@ function App() {
         <Menu theme="light" mode="horizontal" />
       </Header>
       <Content>
-
         <Layout
           style={{
-            padding: '24px 0',
             background: colorBgContainer,
           }}
         >
@@ -65,15 +82,12 @@ function App() {
             style={{
               background: colorBgContainer,
             }}
+            collapsed={collapsed}
           >
             <Menu
               mode="inline"
-              defaultSelectedKeys={['1']}
-              defaultOpenKeys={['sub1']}
-              style={{
-                height: '100%',
-                borderRight: 0,
-              }}
+              defaultSelectedKeys={['/']}
+              defaultOpenKeys={['/']}
               onClick={({key}) => { navigate(key) }}
               items={items}
             />
