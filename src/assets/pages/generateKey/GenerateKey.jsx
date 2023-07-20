@@ -74,7 +74,7 @@ function GenerateKey() {
         layout="vertical"
         onFinish={onProcess}
       >
-        <Form.Item label="Digite o nome dos ambientes:">
+        <Form.Item label="Digite o número de digitos">
           <Input
             type="number"
             placeholder="10"
