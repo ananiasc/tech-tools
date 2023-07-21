@@ -87,7 +87,7 @@ function ConvertText() {
         </Form.Item>
       </Form>
 
-      <h3 style={{marginBottom: '3px'}}>Texto Convertido</h3>
+      <h3 className="margin-h3">Texto Convertido</h3>
       <Form
         labelCol={{ span: 10 }}
         wrapperCol={{ span: 14 }}
