@@ -1,0 +1,21 @@
+.botao {
+  margin: 3px 0px;
+}
+
+@media (min-width: 740px) {
+  .content-body {
+    margin: 0% 20%;
+  }
+  .form-items {
+    width: 43.5vw;
+  }
+}
+
+@media (max-width: 739.98px) {
+  .content-body {
+    margin: 0% 0%;
+  }
+  .form-items {
+    width: 65vw;
+  }
+}
