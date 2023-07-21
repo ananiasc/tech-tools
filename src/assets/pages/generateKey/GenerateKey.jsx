@@ -123,19 +123,19 @@ function GenerateKey() {
             style={{minWidth: '180px'}}
           />
         </Form.Item>
-        <Button type="primary" htmlType="submit">
+        <Button type="primary botao" htmlType="submit">
           Processar
         </Button>
-      </Form><br/><br/>
+      </Form>
 
-      <h3>Senha Gerada</h3>
+      <h3 className="margin-h3">Senha Gerada</h3>
 
       <Form
         labelCol={{ span: 10 }}
         wrapperCol={{ span: 14 }}
         layout="vertical"
       >
-        <Form.Item label="Clique no campo para copiá-lo:">
+        <Form.Item>
           <Space direction="vertical" className='form-items'>
             <Space.Compact className='form-items'>
               <TextArea 
@@ -145,7 +145,7 @@ function GenerateKey() {
                   borderRadius: '5px 0px 5px 5px'
                 }}>
               </TextArea>
-              <Button type="primary" onClick={() => {handleCopyClick()}}><CopyOutlined/></Button>
+              <Button type="primary" title="Clique aqui para copiar a senha" onClick={() => {handleCopyClick()}}><CopyOutlined/></Button>
             </Space.Compact>
           </Space>
         </Form.Item>
