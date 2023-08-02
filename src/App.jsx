@@ -22,6 +22,7 @@ const items = [
   ]),
   getItem("Gerador", "gerador", <SettingOutlined />, [
     getItem("Gerador de Senha", "/generate-key", null),
+    getItem("Gerador de CPF", "/generate-cpf", null),
   ]),
 ];
 
