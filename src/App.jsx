@@ -20,6 +20,10 @@ const items = [
   getItem("Conversão", "conversao", <SettingOutlined />, [
     getItem("Conversor de Texto", "/convert-text", null),
   ]),
+  getItem("Formatador", "formatador", <SettingOutlined />, [
+    getItem("Formatar JSON", "/json-formatter", null),
+    getItem("Formatar XML", "/xml-formatter", null),
+  ]),
   getItem("Gerador", "gerador", <SettingOutlined />, [
     getItem("Gerador de Senha", "/generate-key", null),
     getItem("Gerador de CPF", "/generate-cpf", null),
@@ -104,7 +108,7 @@ function App() {
           </Content>
         </Layout>
       </Content>
-      <Footer style={{ textAlign: 'center' }}>Created by Ananias C. ©2023</Footer>
+      <Footer style={{ textAlign: 'center' }}>Created by Ananias C. ©2025</Footer>
     </Layout>
   );
 }
